@@ -1,0 +1,17 @@
+groups:
+- name: request_count_1m
+  interval: 1m
+  rules:
+  - record: request_count_increase_1m
+    expr: sum(increase(request_count[1m]))
+  - record: request_count_total_1m
+    expr: sum(request_count)
+- name: request_count_10m
+  interval: 10m
+  rules:
+  - record: request_count_increase_10m
+    expr: sum(increase(request_count[10m]))
+  - record: request_count_total_10m
+    expr: sum(request_count)
+
+ 

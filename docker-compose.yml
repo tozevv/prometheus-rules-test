@@ -1,0 +1,11 @@
+version: '3'
+services:
+  prometheus:
+    build: prometheus
+    ports:
+     - "9090:9090"
+  target-app:
+    build: target-app
+    ports:
+     - "8000:8000"
+

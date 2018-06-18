@@ -1,0 +1,2 @@
+#!/bin/bash
+(sudo docker stop test-client || true) && (sudo docker rm test-client || true) && sudo docker build -t test-client . && sudo docker run --name test-client --net testnet -p 8000:8000 test-client
