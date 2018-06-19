@@ -2,7 +2,7 @@
 
 ## Overview
 
-This projects runs a docker composer with a prometheus and a sample target test application. The target application creates the test metrics that are scrapped by the prometheus instance with recording rules support.
+This projects runs a docker composer with a [prometheus](https://prometheus.io/) and a sample target test application. The target application creates the test metrics that are scrapped by the prometheus instance with recording rules support.
  
 Both services start by running `docker-compose up` and stop by running `docker-compose down`. 
 
