@@ -56,7 +56,7 @@ This is the baseline query we are trying to summarize:
 For our test the output was `29232` (rounded).
 
 |rule|query|result|error|
-|---|---|---|---:|---:|
+|---|---|---:|---:|
 |`request_count_total_1m`|`increase(request_count_total_1m[1h])`|	26705| -9% |
 |`request_count_total_10m`|`increase(request_count_total_10m[1h])`|	81834| 180% |
 |`request_count_increase_1m`|`sum_over_time(request_count_increase_1m[1h])`|28298| -3% |
