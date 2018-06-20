@@ -15,7 +15,22 @@ scrape_configs:
   - targets:
     - target-app:8000
     labels:
-      app: test
+      app: app
+      datacenter: slu
+      environment: prd2
+      group: api
+      host: target-app:8000
+      team: olisipo
+- job_name: test-job2
+  scrape_interval: 15s
+  scrape_timeout: 5s
+  metrics_path: /
+  scheme: http
+  static_configs:
+  - targets:
+    - target-app:8000
+    labels:
+      app: app2
       datacenter: slu
       environment: prd2
       group: api

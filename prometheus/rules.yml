@@ -3,15 +3,15 @@ groups:
   interval: 1m
   rules:
   - record: request_count_increase_1m
-    expr: sum(increase(request_count[1m]))
+    expr: sum(increase(request_count[1m])) by (app, datacenter)
   - record: request_count_total_1m
-    expr: sum(request_count)
+    expr: sum(request_count) by (app, datacenter)
 - name: request_count_10m
   interval: 10m
   rules:
   - record: request_count_increase_10m
-    expr: sum(increase(request_count[10m]))
+    expr: sum(increase(request_count[10m])) by (app, datacenter)
   - record: request_count_total_10m
-    expr: sum(request_count)
+    expr: sum(request_count) by (app, datacenter)
 
  
